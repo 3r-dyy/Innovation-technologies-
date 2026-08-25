@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>INNOVATION AT ITS PEAK 2030 | Emerging Technologies</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050816;
+    color: #e5e7eb;
+    line-height: 1.7;
+}
+
+/* ===== NAVIGATION ===== */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5, 8, 22, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #1e293b;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #67e8f9;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #67e8f9;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 30%, #172554 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, #164e63 0%, transparent 30%),
+        #050816;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #164e63;
+    border-radius: 50%;
+    animation: pulse 5s infinite;
+}
+
+.hero-content {
+    max-width: 900px;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid #22d3ee;
+    border-radius: 50px;
+    color: #67e8f9;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 90px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #ffffff, #67e8f9, #818cf8);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #94a3b8;
+    font-size: 18px;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: #06b6d4;
+    color: #020617;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px #0891b2;
+}
+
+/* ===== GENERAL ===== */
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+section {
+    padding: 90px 0;
+}
+
+.section-label {
+    color: #22d3ee;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #f8fafc;
+}
+
+.section-description {
+    max-width: 750px;
+    color: #94a3b8;
+    margin-bottom: 45px;
+}
+
+/* ===== INTRO ===== */
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.intro-box {
+    background: #0b1120;
+    border: 1px solid #1e293b;
+    padding: 35px;
+    border-radius: 20px;
+}
+
+.intro-box p {
+    color: #94a3b8;
+    margin-bottom: 15px;
+}
+
+.tech-visual {
+    min-height: 350px;
+    border-radius: 25px;
+    border: 1px solid #164e63;
+    background:
+        linear-gradient(rgba(6,182,212,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(6,182,212,0.08) 1px, transparent 1px),
+        #07111f;
+    background-size: 35px 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.core {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #67e8f9, #0e7490, #082f49);
+    box-shadow: 0 0 60px #06b6d4;
+    animation: float 4s infinite ease-in-out;
+  
+  .tech-image {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+/* ===== TECHNOLOGY CARDS ===== */
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.tech-card {
+    padding: 35px;
+    background: #0b1120;
+    border: 1px solid #1e293b;
+    border-radius: 20px;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-card::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #06b6d4;
+    filter: blur(70px);
+    opacity: 0;
+    right: -30px;
+    bottom: -30px;
+    transition: 0.4s;
+}
+
+.tech-card:hover {
+    transform: translateY(-8px);
+    border-color: #0891b2;
+}
+
+.tech-card:hover::after {
+    opacity: 0.4;
+}
+
+.icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.tech-card h3 {
+    font-size: 24px;
+    color: #f8fafc;
+    margin-bottom: 12px;
+}
+
+.tech-card p {
+    color: #94a3b8;
+}
+
+/* ===== FEATURE ===== */
+
+.feature {
+    background: #080d1c;
+}
+
+.feature-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.feature-image {
+    min-height: 380px;
+    border-radius: 25px;
+    background:
+        linear-gradient(135deg, rgba(14,116,144,.5), rgba(30,64,175,.2)),
+        url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #164e63;
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-text h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.feature-text p {
+    color: #94a3b8;
+    margin-bottom: 15px;
+}
+
+/* ===== IMPACT ===== */
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.impact-card {
+    background: #0b1120;
+    border: 1px solid #1e293b;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.impact-number {
+    font-size: 40px;
+    font-weight: bold;
+    color: #67e8f9;
+}
+
+.impact-card h3 {
+    margin: 10px 0;
+}
+
+.impact-card p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* ===== BENEFITS ===== */
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.benefit-box {
+    background: #0b1120;
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid #1e293b;
+}
+
+.benefit-box h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.benefit-box ul {
+    list-style: none;
+}
+
+.benefit-box li {
+    padding: 10px 0;
+    border-bottom: 1px solid #1e293b;
+    color: #cbd5e1;
+}
+
+.benefit-box li::before {
+    content: "→ ";
+    color: #22d3ee;
+    font-weight: bold;
+}
+
+/* ===== FUTURE TIMELINE ===== */
+
+.timeline {
+    position: relative;
+    max-width: 850px;
+    margin: auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #164e63;
+}
+
+.timeline-item {
+    width: 50%;
+    padding: 25px;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: 50%;
+}
+
+.timeline-content {
+    background: #0b1120;
+    border: 1px solid #1e293b;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.timeline-content h3 {
+    color: #67e8f9;
+}
+
+.timeline-content p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIBLE TECH ===== */
+
+.responsible {
+    background:
+        radial-gradient(circle at center, #0c4a6e, transparent 45%),
+        #050816;
+}
+
+.responsible-box {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+}
+
+.responsible-box h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.responsible-box p {
+    color: #cbd5e1;
+}
+
+/* ===== RESOURCES ===== */
+
+.resources {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.resource-card {
+    padding: 25px;
+    background: #0b1120;
+    border: 1px solid #1e293b;
+    border-radius: 15px;
+}
+
+.resource-card a {
+    color: #67e8f9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resource-card p {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* ===== CTA ===== */
+
+.cta {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #0e7490, #1e3a8a);
+}
+
+.cta h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    max-width: 700px;
+    margin: auto;
+    color: #dbeafe;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    background: white;
+    color: #0f172a;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #020617;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 1px solid #1e293b;
+}
+
+footer h3 {
+    color: #67e8f9;
+    letter-spacing: 3px;
+}
+
+footer p {
+    color: #64748b;
+    margin-top: 10px;
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0.8);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .intro-grid,
+    .feature-box,
+    .benefit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-grid,
+    .resources {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 35px;
+    }
+
+    .timeline-item:nth-child(even) {
+        margin-left: 0;
+    }
+
+    .cta h2 {
+        font-size: 34px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <div class="logo">
+        INNOVATION AT ITS PEAK // 2030
+    </div>
+
+    <ul>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#technologies">TECH</a></li>
+        <li><a href="#impact">IMPACT</a></li>
+        <li><a href="#future">FUTURE</a></li>
+        <li><a href="#sources">SOURCES</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <span class="badge">
+            EMPOWERMENT TECHNOLOGIES • GRADE 12
+        </span>
+
+        <h1>
+            EMERGING<br>
+            TECHNOLOGIES
+        </h1>
+
+        <p>
+            Discover the innovations transforming the way we learn,
+            work, communicate, create, and imagine tomorrow.
+        </p>
+
+        <a class="hero-button" href="#about">
+            EXPLORE THE FUTURE ↓
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- ================= INTRODUCTION ================= -->
+
+<section id="about">
+
+<div class="container">
+
+    <div class="section-label">
+        01 / INTRODUCTION
+    </div>
+
+    <h2 class="section-title">
+        What Are Emerging Technologies?
+    </h2>
+
+    <p class="section-description">
+        Technology never stands still. New discoveries, inventions, and
+        digital systems continue to change the world around us.
+    </p>
+
+
+    <div class="intro-grid">
+
+        <div class="intro-box">
+
+            <p>
+                Emerging technologies are innovations that are developing
+                rapidly and have the potential to significantly influence
+                society, industries, education, science, and everyday life.
+            </p>
+
+            <p>
+                Some of these technologies are already being used today,
+                while others are still being researched and developed.
+                Examples include artificial intelligence, quantum computing,
+                biotechnology, robotics, the Internet of Things, augmented
+                reality, and virtual reality.
+            </p>
+
+            <p>
+                Understanding these technologies is important because
+                today's students will become tomorrow's workers, creators,
+                entrepreneurs, researchers, and technology users.
+            </p>
+
+        </div>
+
+
+        <div class="tech-visual">
+
+            <div class="core"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TECHNOLOGIES ================= -->
+
+<section id="technologies">
+
+<div class="container">
+
+    <div class="section-label">
+        02 / THE TECHNOLOGY
+    </div>
+
+    <h2 class="section-title">
+        Technologies Changing Tomorrow
+    </h2>
+
+    <p class="section-description">
+        These technologies represent some of the most important areas
+        of innovation shaping the future.
+    </p>
+
+
+    <div class="tech-grid">
+
+
+        <article class="tech-card">
+
+            <img class="tech-image"
+src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+alt="Artificial Intelligence">
+
+            <h3>
+                Artificial Intelligence
+            </h3>
+
+            <p>
+                Artificial Intelligence, or AI, enables computer systems
+                to perform tasks that normally require human intelligence,
+                including recognizing patterns, understanding language,
+                generating content, and making predictions.
+            </p>
+
+        </article>
+
+
+        <article class="tech-card">
+
+            <img class="tech-image" src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80" alt="Quantum Computing">
+
+            <h3>
+                Quantum Computing
+            </h3>
+
+            <p>
+                Quantum computing uses principles of quantum mechanics
+                to process information in ways fundamentally different
+                from traditional computers. Researchers are exploring
+                its potential for scientific research, optimization,
+                cryptography, and other complex problems.
+            </p>
+
+        </article>
+
+
+        <article class="tech-card">
+
+            <img class="tech-image" src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=800&q=80" alt="Biotechnology">
+
+            <h3>
+                Biotechnology
+            </h3>
+
+            <p>
+                Biotechnology combines biological science and technology
+                to develop useful products and processes. It can support
+                medicine, agriculture, food production, environmental
+                protection, and scientific research.
+            </p>
+
+        </article>
+
+
+        <article class="tech-card">
+
+            <img class="tech-image" src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=800&q=80" alt="Internet of Things">
+
+            <h3>
+                Internet of Things
+            </h3>
+
+            <p>
+                The Internet of Things connects physical devices to
+                networks so that they can collect and exchange information.
+                IoT applications can be found in smart homes, agriculture,
+                healthcare, transportation, and manufacturing.
+            </p>
+
+        </article>
+
+
+        <article class="tech-card">
+
+            <img class="tech-image" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Robotics">
+
+            <h3>
+                Robotics
+            </h3>
+
+            <p>
+                Robotics involves designing machines that can perform
+                physical tasks with different levels of automation.
+                Robots are increasingly being explored for manufacturing,
+                healthcare, research, agriculture, and other fields.
+            </p>
+
+        </article>
+
+
+        <article class="tech-card">
+
+            <img class="tech-image"
+src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?auto=format&fit=crop&w=800&q=80"alt="Virtual Reality">
+
+            <h3>
+                AR & VR
+            </h3>
+
+            <p>
+                Augmented Reality and Virtual Reality create interactive
+                digital experiences. These technologies can support
+                education, training, entertainment, design, and simulation.
+            </p>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FEATURE ================= -->
+
+<section class="feature">
+
+<div class="container">
+
+    <div class="feature-box">
+
+        <div
+            class="feature-image"
+            role="img"
+            aria-label="Computer circuit representing emerging technology">
+        </div>
+
+
+        <div class="feature-text">
+
+            <div class="section-label">
+                TECHNOLOGY IN ACTION
+            </div>
+
+            <h3>
+                From Ideas to Real-World Innovation
+            </h3>
+
+            <p>
+                Emerging technology becomes meaningful when people use
+                it to solve real problems. A new invention may begin as
+                an experiment, but it can eventually influence education,
+                business, healthcare, transportation, and communication.
+            </p>
+
+            <p>
+                The most important question is not simply,
+                <strong>"What can technology do?"</strong>
+                but also,
+                <strong>"How should we use it?"</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= IMPACT ================= -->
+
+<section id="impact">
+
+<div class="container">
+
+    <div class="section-label">
+        03 / IMPACT
+    </div>
+
+    <h2 class="section-title">
+        Why Does It Matter?
+    </h2>
+
+    <p class="section-description">
+        Emerging technologies can influence almost every part of society.
+        Their impact can create opportunities while also introducing new
+        responsibilities.
+    </p>
+
+
+    <div class="impact-grid">
+
+        <div class="impact-card">
+
+            <div class="impact-number">
+                01
+            </div>
+
+            <h3>
+                Education
+            </h3>
+
+            <p>
+                Digital tools and intelligent systems can provide new
+                ways for students and teachers to access information,
+                communicate, and learn.
+            </p>
+
+        </div>
+
+
+        <div class="impact-card">
+
+            <div class="impact-number">
+                02
+            </div>
+
+            <h3>
+                Healthcare
+            </h3>
+
+            <p>
+                Emerging technologies can support medical research,
+                diagnosis, data analysis, treatment development,
+                and patient care.
+            </p>
+
+        </div>
+
+
+        <div class="impact-card">
+
+            <div class="impact-number">
+                03
+            </div>
+
+            <h3>
+                Business
+            </h3>
+
+            <p>
+                Businesses can use technology to improve productivity,
+                develop products, communicate with customers, and
+                create new opportunities.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= BENEFITS ================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="section-label">
+        OPPORTUNITIES & CHALLENGES
+    </div>
+
+    <h2 class="section-title">
+        The Two Sides of Innovation
+    </h2>
+
+    <div class="benefit-grid">
+
+
+        <div class="benefit-box">
+
+            <h3>
+                ✦ Potential Benefits
+            </h3>
+
+            <ul>
+
+                <li>
+                    Improve communication and access to information
+                </li>
+
+                <li>
+                                    Support education and learning
+                </li>
+
+                <li>
+                    Increase efficiency and productivity
+                </li>
+
+                <li>
+                    Encourage scientific research
+                </li>
+
+                <li>
+                    Create new careers and businesses
+                </li>
+
+                <li>
+                    Help address environmental problems
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="benefit-box">
+
+            <h3>
+                ⚠ Challenges
+            </h3>
+
+            <ul>
+
+                <li>
+                    Privacy and protection of personal data
+                </li>
+
+                <li>
+                    Cybersecurity threats
+                </li>
+
+                <li>
+                    Ethical concerns
+                </li>
+
+                <li>
+                    Changes in employment and workforce skills
+                </li>
+
+                <li>
+                    Digital inequality and unequal access to technology
+                </li>
+
+                <li>
+                    Misinformation and misuse of digital systems
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FUTURE TIMELINE ================= -->
+
+<section id="future">
+
+<div class="container">
+
+    <div class="section-label">
+        04 / THE FUTURE
+    </div>
+
+    <h2 class="section-title">
+        A Glimpse Into Tomorrow
+    </h2>
+
+    <p class="section-description">
+        The future of technology will not be defined by machines alone.
+        It will be shaped by the decisions people make about how
+        technology should be developed and used.
+    </p>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-content">
+
+                <h3>NOW — 2026</h3>
+
+                <p>
+                    Artificial intelligence, smart devices, robotics,
+                    cloud computing, biotechnology, and immersive digital
+                    experiences are becoming increasingly integrated
+                    into everyday life.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-content">
+
+                <h3>NEAR FUTURE</h3>
+
+                <p>
+                    AI assistants, autonomous systems, advanced robotics,
+                    smart infrastructure, and personalized digital
+                    experiences may become more common in homes,
+                    schools, businesses, and public services.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-content">
+
+                <h3>2030</h3>
+
+                <p>
+                    Technologies that are currently developing may become
+                    more mature, connected, and accessible. The relationship
+                    between humans and intelligent systems may become an
+                    important part of education and the workplace.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-content">
+
+                <h3>BEYOND 2030</h3>
+
+                <p>
+                    Future innovations may introduce technologies that
+                    are difficult to imagine today. Scientific discovery,
+                    responsible innovation, and human creativity will
+                    continue to influence what comes next.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= RESPONSIBLE TECHNOLOGY ================= -->
+
+<section class="responsible">
+
+<div class="container">
+
+    <div class="responsible-box">
+
+        <div class="section-label">
+            05 / RESPONSIBLE INNOVATION
+        </div>
+
+        <h2>
+            Technology Needs Humanity.
+        </h2>
+
+        <p>
+            Innovation should not only focus on what is possible.
+            It should also consider what is ethical, safe, inclusive,
+            sustainable, and beneficial to society.
+        </p>
+
+        <p style="margin-top:20px;">
+            As technology becomes more powerful, people must become
+            more responsible in using it. The future should be built
+            not only with smarter machines, but also with wiser decisions.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SOURCES ================= -->
+
+<section id="sources">
+
+<div class="container">
+
+    <div class="section-label">
+        06 / SOURCES
+    </div>
+
+    <h2 class="section-title">
+        Learn More
+    </h2>
+
+    <p class="section-description">
+        Explore these trusted organizations and educational resources
+        to learn more about emerging technologies and their impact.
+    </p>
+
+
+    <div class="resources">
+
+
+        <div class="resource-card">
+
+            <h3>
+                IBM
+            </h3>
+
+            <p>
+                Explore information about artificial intelligence,
+                quantum computing, cloud technology, and other
+                emerging innovations.
+            </p>
+
+            <a href="https://www.ibm.com/think/topics/artificial-intelligence"
+               target="_blank">
+                VISIT RESOURCE →
+            </a>
+
+        </div>
+
+
+        <div class="resource-card">
+
+            <h3>
+                MIT Technology Review
+            </h3>
+
+            <p>
+                Discover news, research, and explanations about
+                important technologies shaping the future.
+            </p>
+
+            <a href="https://www.technologyreview.com/"
+               target="_blank">
+                VISIT RESOURCE →
+            </a>
+
+        </div>
+
+
+        <div class="resource-card">
+
+            <h3>
+                World Economic Forum
+            </h3>
+
+            <p>
+                Learn about technological change, innovation,
+                digital transformation, and the future of work.
+            </p>
+
+            <a href="https://www.weforum.org/"
+               target="_blank">
+                VISIT RESOURCE →
+            </a>
+
+        </div>
+
+
+        <div class="resource-card">
+
+            <h3>
+                NASA
+            </h3>
+
+            <p>
+                Explore scientific discoveries, space technology,
+                robotics, engineering, and future-oriented research.
+            </p>
+
+            <a href="https://www.nasa.gov/"
+               target="_blank">
+                VISIT RESOURCE →
+            </a>
+
+        </div>
+
+
+        <div class="resource-card">
+
+            <h3>
+                National Institute of Standards and Technology
+            </h3>
+
+            <p>
+                Access research and information related to emerging
+                technologies, cybersecurity, artificial intelligence,
+                and measurement science.
+            </p>
+
+            <a href="https://www.nist.gov/"
+               target="_blank">
+                VISIT RESOURCE →
+            </a>
+
+        </div>
+
+
+        <div class="resource-card">
+
+            <h3>
+                UNESCO
+            </h3>
+
+            <p>
+                Learn about technology, education, artificial
+                intelligence, ethics, and responsible digital
+                transformation.
+            </p>
+
+            <a href="https://www.unesco.org/"
+               target="_blank">
+                VISIT RESOURCE →
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FINAL CTA ================= -->
+
+<section class="cta">
+
+    <h2>
+        THE FUTURE STARTS NOW.
+    </h2>
+
+    <p>
+        Emerging technologies are more than inventions.
+        They are tools that can change how humanity learns,
+        works, communicates, creates, and solves problems.
+    </p>
+
+    <a href="#about" class="cta-button">
+        EXPLORE AGAIN ↑
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>
+        INNOVATION AT ITS PEAK // 2030
+    </h3>
+
+    <p>
+        Emerging Technologies • Empowerment Technologies • Grade 12
+    </p>
+
+    <p>
+        Designed to explore the possibilities of tomorrow.
+    </p>
+  
+  <h2> Section:
+    </h2>
+  <p> 12 STEM 3</p>
+  
+  <h2> Roles and Assigned Members
+    
+  </h2>
+   
+  <h2>Leader And HTML/CSS Developer:
+  </h2>    
+  <p> Bazar, Thirdy L.</p>
+  
+   <h2>Graphic/Media Designer:
+  </h2>
+    <p>Parba, Zachary Shaighne Danielle R.</p>
+<p> Dotillos, Rienzcyl Q.
+  </p>
+  
+  <h2>Content Researcher: </h2>
+  <p> Pagente, Tyler Jesson G.
+    </p>
+  
+  <h2> Content Writer: </h2>
+  <p> Bariquit,Faith Elaine B.
+    </p>
+  
+  <h2>HTML/CSS Developer: </h2>
+  <p> Maestre, Anna Nicole A.
+  </p>
+  
+  <h2>Presentor/Publisher:</h2>
+   <p>Segun, Jorge Clinton V.</p>
+  
+  <h4>Non Working Members:</h4>
+  <p> Gillego, Clifford S.</p>
+  <H2>Reason:</H2>
+  <p>Being a passive member and failed to approach the leader(Bazar) to ask for assigned topic</p>
+
+</footer>
+
+
+<!-- ================= SIMPLE INTERACTION ================= -->
+
+<script>
+
+    // Smooth reveal effect when scrolling
+    const cards = document.querySelectorAll(
+        '.tech-card, .impact-card, .benefit-box, .resource-card, .timeline-content'
+    );
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+
+    cards.forEach(card => {
+
+        card.style.opacity = "0";
+        card.style.transform = "translateY(25px)";
+        card.style.transition = "0.7s ease";
+
+        observer.observe(card);
+
+    });
+
+
+    // Small dynamic effect for the hero
+    const hero = document.querySelector(".hero");
+
+    document.addEventListener("mousemove", (event) => {
+
+        const x = (event.clientX / window.innerWidth) * 100;
+        const y = (event.clientY / window.innerHeight) * 100;
+
+        hero.style.background = `
+            radial-gradient(
+                circle at ${x}% ${y}%,
+                #172554 0%,
+                transparent 35%
+            ),
+            radial-gradient(
+                circle at ${100 - x}% ${100 - y}%,
+                #164e63 0%,
+                transparent 35%
+            ),
+            #050816
+        `;
+
+    });
+
+</script>
+
+</body>
+</html>
